@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Café Nava — Perzisch café in Gent</title>
-<meta name="description" content="Café Nava, Sluizeken 34 Gent. Perzische thee, koffie, mezze, stoofpotten, saffraan en pistaches in een oase van rust.">
+<title>Café Restaurant Nava — Perzisch café in Gent</title>
+<meta name="description" content="Café Restaurant Nava, Sluizeken 34 Gent. Perzische thee, koffie, mezze, stoofpotten, saffraan en pistaches in een oase van rust.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@ body{background:var(--ink);color:var(--cream);font-family:var(--body);font-size:
 img{display:block;max-width:100%}
 a{color:inherit}
 h1,h2,h3{font-family:var(--script);font-weight:700;line-height:1.05}
-h1{font-size:clamp(3rem,8vw,6.8rem)}
+h1{font-size:clamp(2.6rem,6.5vw,5.6rem)}
 h2{font-size:clamp(2.5rem,5vw,4.3rem)}
 h3{font-size:clamp(1.8rem,3vw,2.4rem)}
 p{max-width:62ch}
@@ -33,7 +33,7 @@ p{max-width:62ch}
 /* ---------- sidebar ---------- */
 .side{position:fixed;top:0;bottom:0;left:0;width:var(--sidebar);background:var(--coal);border-right:1px solid var(--line);display:flex;flex-direction:column;padding:34px 36px 24px;z-index:60;overflow:hidden}
 .brand{text-decoration:none;display:block}
-.brand .word{font-family:var(--script);font-size:2.8rem;font-weight:700;line-height:1;color:var(--cream)}
+.brand .word{font-family:var(--script);font-size:2.2rem;font-weight:700;line-height:1;color:var(--cream)}
 .brand .sub{font-size:.95rem;color:var(--dim);margin-top:6px}
 .nav{margin-top:30px;display:flex;flex-direction:column}
 .nav a{text-decoration:none;font-size:1.3rem;padding:6px 0;color:var(--dim);display:flex;align-items:center;gap:0;transition:color .3s,gap .35s}
@@ -146,12 +146,12 @@ section{padding:110px clamp(28px,6vw,96px)}
 .stack .card .pg .big{aspect-ratio:16/10;flex:none}
 .pg .foot{margin-top:auto;padding-top:14px;font-size:.85rem;color:#9b8f7a;text-align:center;font-style:italic}
 .pg.cover{box-shadow:inset 0 0 0 1px rgba(243,234,217,.18),inset 0 0 0 6px #1b1512,inset 0 0 0 7px rgba(213,51,63,.55);background:#1b1512;color:var(--cream);align-items:center;justify-content:center;text-align:center;background-image:radial-gradient(circle at 50% 35%,#3a2b1d,transparent 60%)}
-.pg.cover .w{font-family:var(--script);font-size:3.6rem;font-weight:700;line-height:1}
+.pg.cover .w{font-family:var(--script);font-size:2.9rem;padding:0 10px;font-weight:700;line-height:1}
 .pg.cover .s{font-style:italic;color:var(--dim);margin-top:8px;font-size:1.05rem;line-height:1.5}
 .pg.cover .orn{width:60px;height:1px;background:var(--saffron);margin:24px auto}
 .pg.cover .open{position:absolute;bottom:26px;left:0;right:0;font-size:.9rem;color:var(--saffron);font-style:italic}
 .pg.note{align-items:center;justify-content:center;text-align:center;color:#5e5245;font-style:italic}
-.pg.note .w{font-family:var(--script);font-size:2.4rem;color:#1c1611;font-style:normal;font-weight:700}
+.pg.note .w{font-family:var(--script);font-size:2rem;color:#1c1611;font-style:normal;font-weight:700}
 .pg.note p{font-size:1.05rem;margin-top:14px;max-width:28ch}
 .bookctl{display:flex;justify-content:center;align-items:center;gap:22px;margin-top:66px;color:var(--dim);font-style:italic}
 .bookctl button{width:52px;height:52px;border-radius:50%;background:none;border:1px solid #3a3531;color:var(--cream);font-size:1.4rem;cursor:pointer;transition:.3s;font-family:var(--body)}
@@ -275,6 +275,15 @@ form button{justify-self:start;font-family:var(--body);font-size:1.15rem;backgro
 form button:hover{background:var(--cream);color:#1a1207;transform:translateY(-2px)}
 footer{margin-left:var(--sidebar);padding:34px clamp(28px,6vw,96px);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--dim);font-size:1rem;border-top:1px solid #1d1b19}
 footer .w{font-family:var(--script);font-size:1.6rem;color:var(--cream)}
+footer .legal{text-align:right}footer .legal a{color:var(--cream);text-decoration:none;border-bottom:1px solid #3a3531;transition:.3s}footer .legal a:hover{color:var(--saffron);border-color:var(--saffron)}
+@media (max-width:900px){footer .legal{text-align:left}}
+.modal{position:fixed;inset:0;background:rgba(5,5,5,.9);display:none;place-items:center;z-index:110;padding:24px}
+.modal.open{display:grid}
+.modal .box{background:var(--coal);border:1px solid var(--line);border-radius:6px;max-width:760px;width:100%;max-height:88vh;overflow:auto;padding:38px 40px;position:relative;animation:zoom .4s cubic-bezier(.2,.8,.2,1)}
+.modal .close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--dim);font-size:1.4rem;cursor:pointer}
+.modal h2{font-size:2.4rem;margin-bottom:6px}.modal h3{font-size:1.6rem;color:var(--saffron);margin:22px 0 6px}
+.modal p,.modal li{color:var(--dim);font-size:1.05rem;max-width:none}.modal ul{padding-left:22px}
+.modal .meta{font-style:italic;color:var(--dim);font-size:.95rem}
 .totop{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;background:var(--saffron);color:#fff;border:0;font-size:1.3rem;cursor:pointer;opacity:0;transform:translateY(20px);transition:.4s;z-index:50}
 .totop.show{opacity:1;transform:none}
 
@@ -285,7 +294,7 @@ footer .w{font-family:var(--script);font-size:1.6rem;color:var(--cream)}
   .side{transform:translateX(-100%);transition:transform .5s cubic-bezier(.2,.8,.2,1);width:min(320px,86vw);padding-top:90px}
   .side.open{transform:none;overflow-y:auto;box-shadow:40px 0 80px rgba(0,0,0,.6)}
   .topbar{display:flex;position:fixed;top:0;left:0;right:0;height:64px;z-index:70;align-items:center;justify-content:space-between;padding:0 20px;background:linear-gradient(rgba(8,8,8,.92),rgba(8,8,8,0));backdrop-filter:blur(8px)}
-  .topbar .word{font-family:var(--script);font-size:1.9rem;font-weight:700;text-decoration:none;color:var(--cream)}
+  .topbar .word{font-family:var(--script);font-size:1.5rem;font-weight:700;text-decoration:none;color:var(--cream)}
   .burger{width:44px;height:44px;background:none;border:0;cursor:pointer;display:grid;place-items:center}
   .burger span{display:block;width:26px;height:2px;background:var(--cream);margin:3px 0;transition:.4s}
   .burger.x span:nth-child(1){transform:translateY(8px) rotate(45deg)}.burger.x span:nth-child(2){opacity:0}.burger.x span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
@@ -298,10 +307,10 @@ footer .w{font-family:var(--script);font-size:1.6rem;color:var(--cream)}
 </head>
 <body>
 
-<div class="topbar"><a class="word" href="#top">Café Nava</a><button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button></div>
+<div class="topbar"><a class="word" href="#top">Café Restaurant Nava</a><button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button></div>
 
 <aside class="side" id="side">
-  <a class="brand" href="#top"><div class="word">Café Nava</div><div class="sub" data-i18n="brand_sub">Perzisch café · Gent</div></a>
+  <a class="brand" href="#top"><div class="word">Café Restaurant<br>Nava</div><div class="sub" data-i18n="brand_sub">Perzisch café · Gent</div></a>
   <nav class="nav" id="nav">
     <a href="#top" data-i18n="nav_home">Welkom</a>
     <a href="#over" data-i18n="nav_about">Over ons</a>
@@ -324,7 +333,7 @@ footer .w{font-family:var(--script);font-size:1.6rem;color:var(--cream)}
     <img class="bg" src="img/buitenkant.jpg" alt="">
     <div class="txt">
       <div class="line"><div class="eyebrow" data-i18n="hero_eye">Sluizeken 34, in het hart van Gent</div></div>
-      <div class="line"><h1 data-i18n="hero_h">Welkom bij Café Nava</h1></div>
+      <div class="line"><h1 data-i18n="hero_h">Welkom bij Café Restaurant Nava</h1></div>
       <div class="line"><p data-i18n="hero_p">Een rustige en gezellige sfeer, heerlijke koffie en thee en de smaken van Perzië.</p></div>
       <div class="line"><div class="ctas"><a class="btn" href="#menu"><span data-i18n="hero_cta">Open de menukaart</span> ✦</a><a class="btn solid" href="#reserveren" data-i18n="nav_res">Reserveren</a><a class="btn" href="#afhalen" data-i18n="nav_take">Afhalen</a></div></div>
     </div>
@@ -342,7 +351,7 @@ footer .w{font-family:var(--script);font-size:1.6rem;color:var(--cream)}
       <blockquote data-i18n="about_q"></blockquote>
       <a class="phone" href="tel:+3293869065">09 386 90 65</a>
     </div>
-    <div class="pic rv" data-lb="hero_02" data-cap="Mezze"><img src="" data-img="hero_02" alt="Mezze bij Café Nava"></div>
+    <div class="pic rv" data-lb="hero_02" data-cap="Mezze"><img src="" data-img="hero_02" alt="Mezze bij Café Restaurant Nava"></div>
   </section>
 
   <section class="feat rv">
@@ -466,6 +475,7 @@ footer .w{font-family:var(--script);font-size:1.6rem;color:var(--cream)}
       <p style="margin-top:22px"><strong data-i18n="c_addr_t">Ons adres</strong><a href="https://www.google.com/maps/search/?api=1&query=Sluizeken+34,+9000+Gent" target="_blank" rel="noopener">Sluizeken 34, 9000 Gent</a></p>
       <p><strong data-i18n="c_tel_t">Telefoon</strong><a href="tel:+3293869065">09 386 90 65</a><br><a href="tel:+32494617413">0494 61 74 13</a></p>
       <p><strong>E-mail</strong><a href="mailto:info@cafenava.be">info@cafenava.be</a></p>
+      <p><strong data-i18n="c_company">Onderneming</strong>NAVA BV · BTW BE 1013.306.441</p>
       <p><strong data-i18n="hours_t">Openingsuren</strong><span data-i18n="hours_1"></span><br><span data-i18n="hours_2"></span></p>
       <div class="map"><iframe title="map" loading="lazy" src="https://www.google.com/maps?q=Sluizeken+34,+9000+Gent&output=embed"></iframe></div>
     </div>
@@ -483,7 +493,11 @@ footer .w{font-family:var(--script);font-size:1.6rem;color:var(--cream)}
   </section>
 </main>
 
-<footer><span class="w">Café Nava</span><span>Sluizeken 34, 9000 Gent · <a href="mailto:info@cafenava.be" style="text-decoration:none">info@cafenava.be</a></span><span>© 2026 Café Nava · <span data-i18n="rights">Alle rechten voorbehouden</span></span></footer>
+<footer>
+  <div><span class="w">Café Restaurant Nava</span><br><span>NAVA BV · BTW BE 1013.306.441 · Sluizeken 34, 9000 Gent · <a href="mailto:info@cafenava.be" style="text-decoration:none">info@cafenava.be</a></span></div>
+  <div class="legal"><a href="#" data-legal="terms" data-i18n="l_terms">Algemene voorwaarden</a> · <a href="#" data-legal="privacy" data-i18n="l_privacy">Privacybeleid</a><br><span>© 2026 NAVA BV · <span data-i18n="rights">Alle rechten voorbehouden</span></span></div>
+</footer>
+<div class="modal" id="modal"><div class="box"><button class="close" id="mclose" aria-label="close">✕</button><div id="mbody"></div></div></div>
 <button class="totop" id="totop" aria-label="top">↑</button>
 <a class="cartbadge" id="cartbadge" href="#afhalen"></a>
 <div class="lb" id="lb"><span class="x">✕</span><img alt=""><b></b></div>
@@ -494,13 +508,13 @@ const IMG = {"ablimo": "data:image/webp;base64,UklGRmAkAABXRUJQVlA4IFQkAACwdAGdA
 
 /* ---------- vertalingen ---------- */
 const T = {
-nl:{nav_res:"Reserveren",nav_take:"Afhalen",res_eye:"Reserveren",res_h:"Reserveer een tafel",res_p:"Kies een dag en uur binnen onze openingsuren. U krijgt van ons een bevestiging via telefoon of e-mail.",r_date:"Datum",r_time:"Uur",r_people:"Personen",r_phone:"Telefoon",r_note:"Opmerking (allergieën, kinderstoel, verjaardag …)",r_note2:"Opmerking",r_btn:"Reservatie aanvragen",r_hint:"Liever bellen? 09 386 90 65",t_eye:"Take-away",t_h:"Bestel om af te halen",t_p:"Kies uw gerechten, geef een afhaaluur op en stuur de bestelling door. Betalen doet u bij het afhalen in het café.",t_cart:"Uw bestelling",t_empty:"Nog niets gekozen. Klik op + bij een gerecht.",t_total:"Totaal",t_time:"Afhaaluur",t_btn:"Bestelling doorsturen",x_wed:"Op woensdag zijn we gesloten. Kies een andere dag.",x_past:"Kies een dag en uur in de toekomst.",x_req:"Vul alle verplichte velden in.",x_empty:"Kies eerst minstens één gerecht.",x_hours:"We zijn open van 10:00 tot 19:00.",ok_res:"Bijna klaar!",ok_res_p:"Stuur uw aanvraag door via WhatsApp of e-mail; wij bevestigen zo snel mogelijk.",ok_take:"Bestelling klaar om te versturen",ok_take_p:"Stuur ze door via WhatsApp of e-mail; wij bevestigen het afhaaluur.",wa:"Verstuur via WhatsApp",mail:"Verstuur via e-mail",call:"Bellen",st_open:"Nu open · tot 19:00",st_closed:"Nu gesloten · opent",st_today:"vandaag",st_tomorrow:"morgen",st_at:"om",days:["zo", "ma", "di", "wo", "do", "vr", "za"],m_res:"Reservatie",m_people:"personen",m_order:"Afhaalbestelling",m_pickup:"Afhalen op",m_pay:"Betaling bij afhaling",m_name:"Naam",m_phone:"Tel",m_note:"Opmerking",m_more:"+ meer personen: bel ons",nav_reviews:"Reviews",rev_eye:"Reviews",rev_h:"Wat onze gasten zeggen",rev_n:"op basis van 51 Google-recensies",rev_btn:"Lees alle recensies op Google",ig_h:"Volg ons op Instagram",ig_p:"Nieuwe gerechten, de sfeer in het café en speciale momenten: volg @cafenava.be.",brand_sub:"Perzisch café · Gent",nav_home:"Welkom",nav_about:"Over ons",nav_menu:"Menukaart",nav_products:"Producten",nav_gallery:"Galerij",nav_contact:"Locatie & contact",
+nl:{l_terms:"Algemene voorwaarden",l_privacy:"Privacybeleid",c_company:"Onderneming",nav_res:"Reserveren",nav_take:"Afhalen",res_eye:"Reserveren",res_h:"Reserveer een tafel",res_p:"Kies een dag en uur binnen onze openingsuren. U krijgt van ons een bevestiging via telefoon of e-mail.",r_date:"Datum",r_time:"Uur",r_people:"Personen",r_phone:"Telefoon",r_note:"Opmerking (allergieën, kinderstoel, verjaardag …)",r_note2:"Opmerking",r_btn:"Reservatie aanvragen",r_hint:"Liever bellen? 09 386 90 65",t_eye:"Take-away",t_h:"Bestel om af te halen",t_p:"Kies uw gerechten, geef een afhaaluur op en stuur de bestelling door. Betalen doet u bij het afhalen in het café.",t_cart:"Uw bestelling",t_empty:"Nog niets gekozen. Klik op + bij een gerecht.",t_total:"Totaal",t_time:"Afhaaluur",t_btn:"Bestelling doorsturen",x_wed:"Op woensdag zijn we gesloten. Kies een andere dag.",x_past:"Kies een dag en uur in de toekomst.",x_req:"Vul alle verplichte velden in.",x_empty:"Kies eerst minstens één gerecht.",x_hours:"We zijn open van 10:00 tot 19:00.",ok_res:"Bijna klaar!",ok_res_p:"Stuur uw aanvraag door via WhatsApp of e-mail; wij bevestigen zo snel mogelijk.",ok_take:"Bestelling klaar om te versturen",ok_take_p:"Stuur ze door via WhatsApp of e-mail; wij bevestigen het afhaaluur.",wa:"Verstuur via WhatsApp",mail:"Verstuur via e-mail",call:"Bellen",st_open:"Nu open · tot 19:00",st_closed:"Nu gesloten · opent",st_today:"vandaag",st_tomorrow:"morgen",st_at:"om",days:["zo", "ma", "di", "wo", "do", "vr", "za"],m_res:"Reservatie",m_people:"personen",m_order:"Afhaalbestelling",m_pickup:"Afhalen op",m_pay:"Betaling bij afhaling",m_name:"Naam",m_phone:"Tel",m_note:"Opmerking",m_more:"+ meer personen: bel ons",nav_reviews:"Reviews",rev_eye:"Reviews",rev_h:"Wat onze gasten zeggen",rev_n:"op basis van 51 Google-recensies",rev_btn:"Lees alle recensies op Google",ig_h:"Volg ons op Instagram",ig_p:"Nieuwe gerechten, de sfeer in het café en speciale momenten: volg @cafenava.be.",brand_sub:"Perzisch café · Gent",nav_home:"Welkom",nav_about:"Over ons",nav_menu:"Menukaart",nav_products:"Producten",nav_gallery:"Galerij",nav_contact:"Locatie & contact",
 hours_t:"Openingsuren",hours_1:"Ma, di, do, vr, za, zo: 10:00 – 19:00",hours_2:"Woensdag gesloten",
-hero_eye:"Sluizeken 34, in het hart van Gent",hero_h:"Welkom bij Café Nava",hero_p:"Een rustige en gezellige sfeer, heerlijke koffie en thee en de smaken van Perzië.",hero_cta:"Open de menukaart",scroll:"scroll",
+hero_eye:"Sluizeken 34, in het hart van Gent",hero_h:"Welkom bij Café Restaurant Nava",hero_p:"Een rustige en gezellige sfeer, heerlijke koffie en thee en de smaken van Perzië.",hero_cta:"Open de menukaart",scroll:"scroll",
 about_eye:"Over ons",about_h:"Een oase van rust in Gent",
-about_p1:"Café Nava ligt in het hart van Gent, in een straat vol gezellige cafés en restaurants. Geniet van een chique en rustige sfeer met koude en warme hapjes: een warme, uitnodigende plek waar u ontspant met een heerlijke kop koffie, vers gezette thee en verfrissende drankjes.",
+about_p1:"Café Restaurant Nava ligt in het hart van Gent, in een straat vol gezellige cafés en restaurants. Geniet van een chique en rustige sfeer met koude en warme hapjes: een warme, uitnodigende plek waar u ontspant met een heerlijke kop koffie, vers gezette thee en verfrissende drankjes.",
 about_p2:"Of u nu alleen komt voor een moment van rust of met vrienden wilt genieten: wij zorgen voor een onvergetelijke ervaring. We kijken ernaar uit om u te verwelkomen!",
-about_q:"Bij Café Nava vindt u ook authentieke Iraanse producten zoals saffraan en pistachenoten.",
+about_q:"Bij Café Restaurant Nava vindt u ook authentieke Iraanse producten zoals saffraan en pistachenoten.",
 f1_h:"Thee, koffie & Napoleongebak",f1_p:"Perzische thee in het glas, goede koffie en vers Iraans Napoleongebak.",
 f2_h:"Premium Iraanse saffraan",f2_p:"Rijk aroma en diepe kleur, ook om mee naar huis te nemen.",
 f3_h:"Stoofpotten met saffraanrijst",f3_p:"Ghormeh sabzi, gheimeh en khoresht bademjan zoals thuis.",
@@ -520,13 +534,13 @@ b_cover_s:"Menukaart",b_open:"klik om te openen",b_inside:"Alles wat we te biede
 ch:{coffee:"Koffie & thee",drinks:"Perzische dranken",mezze:"Mezze",sand:"Broodjes",stew:"Stoofpotten",dopi:"Dopiazeh"},
 fa:{coffee:"Met een zoetigheid van het huis",drinks:"IJskoud geserveerd",mezze:"Met vers brood en salade",sand:"Baguette, salade en huisgemaakte saus",stew:"Met saffraanrijst en salade",dopi:"Met brood en salade"}},
 
-en:{nav_res:"Book a table",nav_take:"Take-away",res_eye:"Reservations",res_h:"Book a table",res_p:"Pick a day and time within our opening hours. We confirm by phone or e-mail.",r_date:"Date",r_time:"Time",r_people:"Guests",r_phone:"Phone",r_note:"Note (allergies, high chair, birthday …)",r_note2:"Note",r_btn:"Request reservation",r_hint:"Prefer to call? 09 386 90 65",t_eye:"Take-away",t_h:"Order for pick-up",t_p:"Choose your dishes, pick a collection time and send the order. You pay when you collect at the café.",t_cart:"Your order",t_empty:"Nothing chosen yet. Click + next to a dish.",t_total:"Total",t_time:"Pick-up time",t_btn:"Send order",x_wed:"We are closed on Wednesdays. Please choose another day.",x_past:"Choose a day and time in the future.",x_req:"Please fill in all required fields.",x_empty:"Choose at least one dish first.",x_hours:"We are open from 10:00 to 19:00.",ok_res:"Almost done!",ok_res_p:"Send your request via WhatsApp or e-mail; we confirm as soon as possible.",ok_take:"Order ready to send",ok_take_p:"Send it via WhatsApp or e-mail; we confirm the pick-up time.",wa:"Send via WhatsApp",mail:"Send via e-mail",call:"Call us",st_open:"Open now · until 19:00",st_closed:"Closed now · opens",st_today:"today",st_tomorrow:"tomorrow",st_at:"at",days:["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],m_res:"Reservation",m_people:"guests",m_order:"Take-away order",m_pickup:"Pick-up",m_pay:"Payment on collection",m_name:"Name",m_phone:"Phone",m_note:"Note",m_more:"+ larger groups: please call",nav_reviews:"Reviews",rev_eye:"Reviews",rev_h:"What our guests say",rev_n:"based on 51 Google reviews",rev_btn:"Read all reviews on Google",ig_h:"Follow us on Instagram",ig_p:"New dishes, the atmosphere in the café and special moments: follow @cafenava.be.",brand_sub:"Persian café · Ghent",nav_home:"Welcome",nav_about:"About us",nav_menu:"Menu",nav_products:"Products",nav_gallery:"Gallery",nav_contact:"Location & contact",
+en:{l_terms:"Terms & conditions",l_privacy:"Privacy policy",c_company:"Company",nav_res:"Book a table",nav_take:"Take-away",res_eye:"Reservations",res_h:"Book a table",res_p:"Pick a day and time within our opening hours. We confirm by phone or e-mail.",r_date:"Date",r_time:"Time",r_people:"Guests",r_phone:"Phone",r_note:"Note (allergies, high chair, birthday …)",r_note2:"Note",r_btn:"Request reservation",r_hint:"Prefer to call? 09 386 90 65",t_eye:"Take-away",t_h:"Order for pick-up",t_p:"Choose your dishes, pick a collection time and send the order. You pay when you collect at the café.",t_cart:"Your order",t_empty:"Nothing chosen yet. Click + next to a dish.",t_total:"Total",t_time:"Pick-up time",t_btn:"Send order",x_wed:"We are closed on Wednesdays. Please choose another day.",x_past:"Choose a day and time in the future.",x_req:"Please fill in all required fields.",x_empty:"Choose at least one dish first.",x_hours:"We are open from 10:00 to 19:00.",ok_res:"Almost done!",ok_res_p:"Send your request via WhatsApp or e-mail; we confirm as soon as possible.",ok_take:"Order ready to send",ok_take_p:"Send it via WhatsApp or e-mail; we confirm the pick-up time.",wa:"Send via WhatsApp",mail:"Send via e-mail",call:"Call us",st_open:"Open now · until 19:00",st_closed:"Closed now · opens",st_today:"today",st_tomorrow:"tomorrow",st_at:"at",days:["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],m_res:"Reservation",m_people:"guests",m_order:"Take-away order",m_pickup:"Pick-up",m_pay:"Payment on collection",m_name:"Name",m_phone:"Phone",m_note:"Note",m_more:"+ larger groups: please call",nav_reviews:"Reviews",rev_eye:"Reviews",rev_h:"What our guests say",rev_n:"based on 51 Google reviews",rev_btn:"Read all reviews on Google",ig_h:"Follow us on Instagram",ig_p:"New dishes, the atmosphere in the café and special moments: follow @cafenava.be.",brand_sub:"Persian café · Ghent",nav_home:"Welcome",nav_about:"About us",nav_menu:"Menu",nav_products:"Products",nav_gallery:"Gallery",nav_contact:"Location & contact",
 hours_t:"Opening hours",hours_1:"Mon, Tue, Thu–Sun: 10:00 – 19:00",hours_2:"Closed on Wednesday",
-hero_eye:"Sluizeken 34, in the heart of Ghent",hero_h:"Welcome to Café Nava",hero_p:"A calm, cosy atmosphere, delicious coffee and tea, and the flavours of Persia.",hero_cta:"Open the menu",scroll:"scroll",
+hero_eye:"Sluizeken 34, in the heart of Ghent",hero_h:"Welcome to Café Restaurant Nava",hero_p:"A calm, cosy atmosphere, delicious coffee and tea, and the flavours of Persia.",hero_cta:"Open the menu",scroll:"scroll",
 about_eye:"About us",about_h:"An oasis of calm in Ghent",
-about_p1:"Café Nava sits in the heart of Ghent, on a street full of friendly cafés and restaurants. Enjoy a chic, quiet atmosphere with hot and cold snacks: a warm, inviting place to relax with a lovely cup of coffee, freshly brewed tea and refreshing drinks.",
+about_p1:"Café Restaurant Nava sits in the heart of Ghent, on a street full of friendly cafés and restaurants. Enjoy a chic, quiet atmosphere with hot and cold snacks: a warm, inviting place to relax with a lovely cup of coffee, freshly brewed tea and refreshing drinks.",
 about_p2:"Whether you come alone for a moment of peace or with friends to enjoy yourselves, we make sure it is an unforgettable experience. We look forward to welcoming you!",
-about_q:"At Café Nava you will also find authentic Iranian products such as saffron and pistachios.",
+about_q:"At Café Restaurant Nava you will also find authentic Iranian products such as saffron and pistachios.",
 f1_h:"Tea, coffee & Napoleon pastry",f1_p:"Persian tea in a glass, good coffee and fresh Iranian Napoleon pastry.",
 f2_h:"Premium Iranian saffron",f2_p:"Rich aroma and deep colour, also to take home.",
 f3_h:"Stews with saffron rice",f3_p:"Ghormeh sabzi, gheimeh and khoresht bademjan, just like home.",
@@ -546,13 +560,13 @@ b_cover_s:"Menu",b_open:"click to open",b_inside:"Everything we offer, made with
 ch:{coffee:"Coffee & tea",drinks:"Persian drinks",mezze:"Mezze",sand:"Sandwiches",stew:"Stews",dopi:"Dopiazeh"},
 fa:{coffee:"With a sweet from the house",drinks:"Served ice-cold",mezze:"With fresh bread and salad",sand:"Baguette, salad and homemade sauce",stew:"With saffron rice and salad",dopi:"With bread and salad"}},
 
-fr:{nav_res:"Réserver",nav_take:"À emporter",res_eye:"Réservations",res_h:"Réservez une table",res_p:"Choisissez un jour et une heure dans nos heures d'ouverture. Nous confirmons par téléphone ou e-mail.",r_date:"Date",r_time:"Heure",r_people:"Personnes",r_phone:"Téléphone",r_note:"Remarque (allergies, chaise haute, anniversaire …)",r_note2:"Remarque",r_btn:"Demander une réservation",r_hint:"Vous préférez appeler ? 09 386 90 65",t_eye:"À emporter",t_h:"Commandez à emporter",t_p:"Choisissez vos plats, indiquez une heure de retrait et envoyez la commande. Vous payez au retrait, au café.",t_cart:"Votre commande",t_empty:"Rien de choisi. Cliquez sur + à côté d'un plat.",t_total:"Total",t_time:"Heure de retrait",t_btn:"Envoyer la commande",x_wed:"Nous sommes fermés le mercredi. Choisissez un autre jour.",x_past:"Choisissez un jour et une heure à venir.",x_req:"Veuillez remplir tous les champs obligatoires.",x_empty:"Choisissez d'abord au moins un plat.",x_hours:"Nous sommes ouverts de 10h à 19h.",ok_res:"Presque terminé !",ok_res_p:"Envoyez votre demande via WhatsApp ou e-mail ; nous confirmons au plus vite.",ok_take:"Commande prête à envoyer",ok_take_p:"Envoyez-la via WhatsApp ou e-mail ; nous confirmons l'heure de retrait.",wa:"Envoyer via WhatsApp",mail:"Envoyer par e-mail",call:"Appeler",st_open:"Ouvert · jusqu'à 19h",st_closed:"Fermé · ouvre",st_today:"aujourd'hui",st_tomorrow:"demain",st_at:"à",days:["dim", "lun", "mar", "mer", "jeu", "ven", "sam"],m_res:"Réservation",m_people:"personnes",m_order:"Commande à emporter",m_pickup:"Retrait",m_pay:"Paiement au retrait",m_name:"Nom",m_phone:"Tél",m_note:"Remarque",m_more:"+ grands groupes : appelez-nous",nav_reviews:"Avis",rev_eye:"Avis",rev_h:"Ce que disent nos clients",rev_n:"sur base de 51 avis Google",rev_btn:"Lire tous les avis sur Google",ig_h:"Suivez-nous sur Instagram",ig_p:"Nouveaux plats, l'ambiance du café et moments spéciaux : suivez @cafenava.be.",brand_sub:"Café persan · Gand",nav_home:"Bienvenue",nav_about:"À propos",nav_menu:"Carte",nav_products:"Produits",nav_gallery:"Galerie",nav_contact:"Adresse & contact",
+fr:{l_terms:"Conditions générales",l_privacy:"Politique de confidentialité",c_company:"Entreprise",nav_res:"Réserver",nav_take:"À emporter",res_eye:"Réservations",res_h:"Réservez une table",res_p:"Choisissez un jour et une heure dans nos heures d'ouverture. Nous confirmons par téléphone ou e-mail.",r_date:"Date",r_time:"Heure",r_people:"Personnes",r_phone:"Téléphone",r_note:"Remarque (allergies, chaise haute, anniversaire …)",r_note2:"Remarque",r_btn:"Demander une réservation",r_hint:"Vous préférez appeler ? 09 386 90 65",t_eye:"À emporter",t_h:"Commandez à emporter",t_p:"Choisissez vos plats, indiquez une heure de retrait et envoyez la commande. Vous payez au retrait, au café.",t_cart:"Votre commande",t_empty:"Rien de choisi. Cliquez sur + à côté d'un plat.",t_total:"Total",t_time:"Heure de retrait",t_btn:"Envoyer la commande",x_wed:"Nous sommes fermés le mercredi. Choisissez un autre jour.",x_past:"Choisissez un jour et une heure à venir.",x_req:"Veuillez remplir tous les champs obligatoires.",x_empty:"Choisissez d'abord au moins un plat.",x_hours:"Nous sommes ouverts de 10h à 19h.",ok_res:"Presque terminé !",ok_res_p:"Envoyez votre demande via WhatsApp ou e-mail ; nous confirmons au plus vite.",ok_take:"Commande prête à envoyer",ok_take_p:"Envoyez-la via WhatsApp ou e-mail ; nous confirmons l'heure de retrait.",wa:"Envoyer via WhatsApp",mail:"Envoyer par e-mail",call:"Appeler",st_open:"Ouvert · jusqu'à 19h",st_closed:"Fermé · ouvre",st_today:"aujourd'hui",st_tomorrow:"demain",st_at:"à",days:["dim", "lun", "mar", "mer", "jeu", "ven", "sam"],m_res:"Réservation",m_people:"personnes",m_order:"Commande à emporter",m_pickup:"Retrait",m_pay:"Paiement au retrait",m_name:"Nom",m_phone:"Tél",m_note:"Remarque",m_more:"+ grands groupes : appelez-nous",nav_reviews:"Avis",rev_eye:"Avis",rev_h:"Ce que disent nos clients",rev_n:"sur base de 51 avis Google",rev_btn:"Lire tous les avis sur Google",ig_h:"Suivez-nous sur Instagram",ig_p:"Nouveaux plats, l'ambiance du café et moments spéciaux : suivez @cafenava.be.",brand_sub:"Café persan · Gand",nav_home:"Bienvenue",nav_about:"À propos",nav_menu:"Carte",nav_products:"Produits",nav_gallery:"Galerie",nav_contact:"Adresse & contact",
 hours_t:"Heures d'ouverture",hours_1:"Lu, ma, je–di : 10h – 19h",hours_2:"Fermé le mercredi",
-hero_eye:"Sluizeken 34, au cœur de Gand",hero_h:"Bienvenue au Café Nava",hero_p:"Une ambiance calme et chaleureuse, un délicieux café, du thé et les saveurs de la Perse.",hero_cta:"Ouvrir la carte",scroll:"défiler",
+hero_eye:"Sluizeken 34, au cœur de Gand",hero_h:"Bienvenue au Café Restaurant Nava",hero_p:"Une ambiance calme et chaleureuse, un délicieux café, du thé et les saveurs de la Perse.",hero_cta:"Ouvrir la carte",scroll:"défiler",
 about_eye:"À propos",about_h:"Une oasis de calme à Gand",
-about_p1:"Le Café Nava se trouve au cœur de Gand, dans une rue pleine de cafés et de restaurants conviviaux. Profitez d'une ambiance chic et paisible avec des collations chaudes et froides : un lieu chaleureux où se détendre autour d'un bon café, d'un thé fraîchement infusé et de boissons rafraîchissantes.",
+about_p1:"Le Café Restaurant Nava se trouve au cœur de Gand, dans une rue pleine de cafés et de restaurants conviviaux. Profitez d'une ambiance chic et paisible avec des collations chaudes et froides : un lieu chaleureux où se détendre autour d'un bon café, d'un thé fraîchement infusé et de boissons rafraîchissantes.",
 about_p2:"Que vous veniez seul pour un moment de calme ou entre amis, nous vous garantissons une expérience inoubliable. Nous avons hâte de vous accueillir !",
-about_q:"Au Café Nava, vous trouverez aussi des produits iraniens authentiques comme le safran et les pistaches.",
+about_q:"Au Café Restaurant Nava, vous trouverez aussi des produits iraniens authentiques comme le safran et les pistaches.",
 f1_h:"Thé, café & Napoléon",f1_p:"Thé persan dans le verre, bon café et Napoléon iranien frais.",
 f2_h:"Safran iranien premium",f2_p:"Arôme riche et couleur profonde, aussi à emporter.",
 f3_h:"Ragoûts au riz safrané",f3_p:"Ghormeh sabzi, gheimeh et khoresht bademjan comme à la maison.",
@@ -572,13 +586,13 @@ b_cover_s:"Carte",b_open:"cliquez pour ouvrir",b_inside:"Tout ce que nous propos
 ch:{coffee:"Café & thé",drinks:"Boissons persanes",mezze:"Mezze",sand:"Sandwichs",stew:"Ragoûts",dopi:"Dopiazeh"},
 fa:{coffee:"Avec une douceur de la maison",drinks:"Servies glacées",mezze:"Avec pain frais et salade",sand:"Baguette, salade et sauce maison",stew:"Avec riz au safran et salade",dopi:"Avec pain et salade"}},
 
-de:{nav_res:"Reservieren",nav_take:"Abholen",res_eye:"Reservierung",res_h:"Tisch reservieren",res_p:"Wählen Sie Tag und Uhrzeit innerhalb unserer Öffnungszeiten. Wir bestätigen per Telefon oder E-Mail.",r_date:"Datum",r_time:"Uhrzeit",r_people:"Personen",r_phone:"Telefon",r_note:"Anmerkung (Allergien, Hochstuhl, Geburtstag …)",r_note2:"Anmerkung",r_btn:"Reservierung anfragen",r_hint:"Lieber anrufen? 09 386 90 65",t_eye:"Zum Mitnehmen",t_h:"Zum Abholen bestellen",t_p:"Wählen Sie Ihre Gerichte, geben Sie eine Abholzeit an und senden Sie die Bestellung. Bezahlt wird bei der Abholung im Café.",t_cart:"Ihre Bestellung",t_empty:"Noch nichts gewählt. Klicken Sie auf + bei einem Gericht.",t_total:"Gesamt",t_time:"Abholzeit",t_btn:"Bestellung senden",x_wed:"Mittwochs sind wir geschlossen. Bitte wählen Sie einen anderen Tag.",x_past:"Wählen Sie Tag und Uhrzeit in der Zukunft.",x_req:"Bitte alle Pflichtfelder ausfüllen.",x_empty:"Wählen Sie zuerst mindestens ein Gericht.",x_hours:"Wir haben von 10:00 bis 19:00 geöffnet.",ok_res:"Fast fertig!",ok_res_p:"Senden Sie Ihre Anfrage per WhatsApp oder E-Mail; wir bestätigen schnellstmöglich.",ok_take:"Bestellung bereit zum Senden",ok_take_p:"Senden Sie sie per WhatsApp oder E-Mail; wir bestätigen die Abholzeit.",wa:"Per WhatsApp senden",mail:"Per E-Mail senden",call:"Anrufen",st_open:"Jetzt geöffnet · bis 19:00",st_closed:"Jetzt geschlossen · öffnet",st_today:"heute",st_tomorrow:"morgen",st_at:"um",days:["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],m_res:"Reservierung",m_people:"Personen",m_order:"Abholbestellung",m_pickup:"Abholung",m_pay:"Zahlung bei Abholung",m_name:"Name",m_phone:"Tel",m_note:"Anmerkung",m_more:"+ größere Gruppen: bitte anrufen",nav_reviews:"Bewertungen",rev_eye:"Bewertungen",rev_h:"Was unsere Gäste sagen",rev_n:"basierend auf 51 Google-Bewertungen",rev_btn:"Alle Bewertungen auf Google lesen",ig_h:"Folgen Sie uns auf Instagram",ig_p:"Neue Gerichte, die Atmosphäre im Café und besondere Momente: folgen Sie @cafenava.be.",brand_sub:"Persisches Café · Gent",nav_home:"Willkommen",nav_about:"Über uns",nav_menu:"Speisekarte",nav_products:"Produkte",nav_gallery:"Galerie",nav_contact:"Lage & Kontakt",
+de:{l_terms:"AGB",l_privacy:"Datenschutz",c_company:"Unternehmen",nav_res:"Reservieren",nav_take:"Abholen",res_eye:"Reservierung",res_h:"Tisch reservieren",res_p:"Wählen Sie Tag und Uhrzeit innerhalb unserer Öffnungszeiten. Wir bestätigen per Telefon oder E-Mail.",r_date:"Datum",r_time:"Uhrzeit",r_people:"Personen",r_phone:"Telefon",r_note:"Anmerkung (Allergien, Hochstuhl, Geburtstag …)",r_note2:"Anmerkung",r_btn:"Reservierung anfragen",r_hint:"Lieber anrufen? 09 386 90 65",t_eye:"Zum Mitnehmen",t_h:"Zum Abholen bestellen",t_p:"Wählen Sie Ihre Gerichte, geben Sie eine Abholzeit an und senden Sie die Bestellung. Bezahlt wird bei der Abholung im Café.",t_cart:"Ihre Bestellung",t_empty:"Noch nichts gewählt. Klicken Sie auf + bei einem Gericht.",t_total:"Gesamt",t_time:"Abholzeit",t_btn:"Bestellung senden",x_wed:"Mittwochs sind wir geschlossen. Bitte wählen Sie einen anderen Tag.",x_past:"Wählen Sie Tag und Uhrzeit in der Zukunft.",x_req:"Bitte alle Pflichtfelder ausfüllen.",x_empty:"Wählen Sie zuerst mindestens ein Gericht.",x_hours:"Wir haben von 10:00 bis 19:00 geöffnet.",ok_res:"Fast fertig!",ok_res_p:"Senden Sie Ihre Anfrage per WhatsApp oder E-Mail; wir bestätigen schnellstmöglich.",ok_take:"Bestellung bereit zum Senden",ok_take_p:"Senden Sie sie per WhatsApp oder E-Mail; wir bestätigen die Abholzeit.",wa:"Per WhatsApp senden",mail:"Per E-Mail senden",call:"Anrufen",st_open:"Jetzt geöffnet · bis 19:00",st_closed:"Jetzt geschlossen · öffnet",st_today:"heute",st_tomorrow:"morgen",st_at:"um",days:["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],m_res:"Reservierung",m_people:"Personen",m_order:"Abholbestellung",m_pickup:"Abholung",m_pay:"Zahlung bei Abholung",m_name:"Name",m_phone:"Tel",m_note:"Anmerkung",m_more:"+ größere Gruppen: bitte anrufen",nav_reviews:"Bewertungen",rev_eye:"Bewertungen",rev_h:"Was unsere Gäste sagen",rev_n:"basierend auf 51 Google-Bewertungen",rev_btn:"Alle Bewertungen auf Google lesen",ig_h:"Folgen Sie uns auf Instagram",ig_p:"Neue Gerichte, die Atmosphäre im Café und besondere Momente: folgen Sie @cafenava.be.",brand_sub:"Persisches Café · Gent",nav_home:"Willkommen",nav_about:"Über uns",nav_menu:"Speisekarte",nav_products:"Produkte",nav_gallery:"Galerie",nav_contact:"Lage & Kontakt",
 hours_t:"Öffnungszeiten",hours_1:"Mo, Di, Do–So: 10:00 – 19:00",hours_2:"Mittwochs geschlossen",
-hero_eye:"Sluizeken 34, im Herzen von Gent",hero_h:"Willkommen im Café Nava",hero_p:"Eine ruhige, gemütliche Atmosphäre, köstlicher Kaffee und Tee und die Aromen Persiens.",hero_cta:"Speisekarte öffnen",scroll:"scrollen",
+hero_eye:"Sluizeken 34, im Herzen von Gent",hero_h:"Willkommen im Café Restaurant Nava",hero_p:"Eine ruhige, gemütliche Atmosphäre, köstlicher Kaffee und Tee und die Aromen Persiens.",hero_cta:"Speisekarte öffnen",scroll:"scrollen",
 about_eye:"Über uns",about_h:"Eine Oase der Ruhe in Gent",
-about_p1:"Das Café Nava liegt im Herzen von Gent, in einer Straße voller gemütlicher Cafés und Restaurants. Genießen Sie eine schicke, ruhige Atmosphäre mit warmen und kalten Snacks: ein warmer, einladender Ort, um bei einer guten Tasse Kaffee, frisch aufgebrühtem Tee und erfrischenden Getränken zu entspannen.",
+about_p1:"Das Café Restaurant Nava liegt im Herzen von Gent, in einer Straße voller gemütlicher Cafés und Restaurants. Genießen Sie eine schicke, ruhige Atmosphäre mit warmen und kalten Snacks: ein warmer, einladender Ort, um bei einer guten Tasse Kaffee, frisch aufgebrühtem Tee und erfrischenden Getränken zu entspannen.",
 about_p2:"Ob Sie allein für einen Moment der Ruhe kommen oder mit Freunden genießen möchten: Wir sorgen für ein unvergessliches Erlebnis. Wir freuen uns auf Ihren Besuch!",
-about_q:"Im Café Nava finden Sie auch authentische iranische Produkte wie Safran und Pistazien.",
+about_q:"Im Café Restaurant Nava finden Sie auch authentische iranische Produkte wie Safran und Pistazien.",
 f1_h:"Tee, Kaffee & Napoleon-Gebäck",f1_p:"Persischer Tee im Glas, guter Kaffee und frisches iranisches Napoleon-Gebäck.",
 f2_h:"Premium-Safran aus dem Iran",f2_p:"Reiches Aroma und tiefe Farbe, auch zum Mitnehmen.",
 f3_h:"Schmorgerichte mit Safranreis",f3_p:"Ghormeh Sabzi, Gheimeh und Khoresht Bademjan wie zu Hause.",
@@ -597,13 +611,13 @@ f_name:"Name",f_mail:"E-Mail",f_subj:"Betreff",f_msg:"Nachricht",f_send:"Senden"
 b_cover_s:"Speisekarte",b_open:"zum Öffnen klicken",b_inside:"Alles, was wir anbieten, mit Liebe zubereitet.",b_page:"Seite",b_of:"von",b_back:"Bis bald!",
 ch:{coffee:"Kaffee & Tee",drinks:"Persische Getränke",mezze:"Mezze",sand:"Baguettes",stew:"Schmorgerichte",dopi:"Dopiazeh"},
 fa:{coffee:"Mit einer Süßigkeit des Hauses",drinks:"Eiskalt serviert",mezze:"Mit frischem Brot und Salat",sand:"Baguette, Salat und hausgemachte Sauce",stew:"Mit Safranreis und Salat",dopi:"Mit Brot und Salat"}},
-es:{nav_res:"Reservar",nav_take:"Para llevar",res_eye:"Reservas",res_h:"Reserve una mesa",res_p:"Elija día y hora dentro de nuestro horario. Confirmamos por teléfono o correo.",r_date:"Fecha",r_time:"Hora",r_people:"Personas",r_phone:"Teléfono",r_note:"Nota (alergias, trona, cumpleaños …)",r_note2:"Nota",r_btn:"Solicitar reserva",r_hint:"¿Prefiere llamar? 09 386 90 65",t_eye:"Para llevar",t_h:"Pida para llevar",t_p:"Elija sus platos, indique una hora de recogida y envíe el pedido. Se paga al recoger en el café.",t_cart:"Su pedido",t_empty:"Nada elegido aún. Haga clic en + junto a un plato.",t_total:"Total",t_time:"Hora de recogida",t_btn:"Enviar pedido",x_wed:"Los miércoles cerramos. Elija otro día.",x_past:"Elija un día y una hora futuros.",x_req:"Rellene todos los campos obligatorios.",x_empty:"Elija primero al menos un plato.",x_hours:"Abrimos de 10:00 a 19:00.",ok_res:"¡Casi listo!",ok_res_p:"Envíe su solicitud por WhatsApp o correo; confirmamos lo antes posible.",ok_take:"Pedido listo para enviar",ok_take_p:"Envíelo por WhatsApp o correo; confirmamos la hora de recogida.",wa:"Enviar por WhatsApp",mail:"Enviar por correo",call:"Llamar",st_open:"Abierto · hasta las 19:00",st_closed:"Cerrado · abre",st_today:"hoy",st_tomorrow:"mañana",st_at:"a las",days:["dom", "lun", "mar", "mié", "jue", "vie", "sáb"],m_res:"Reserva",m_people:"personas",m_order:"Pedido para llevar",m_pickup:"Recogida",m_pay:"Pago al recoger",m_name:"Nombre",m_phone:"Tel",m_note:"Nota",m_more:"+ grupos grandes: llámenos",brand_sub:"Café persa · Gante",nav_home:"Bienvenido",nav_about:"Sobre nosotros",nav_menu:"Carta",nav_products:"Productos",nav_gallery:"Galería",nav_contact:"Ubicación y contacto",nav_reviews:"Reseñas",
+es:{l_terms:"Términos y condiciones",l_privacy:"Política de privacidad",c_company:"Empresa",nav_res:"Reservar",nav_take:"Para llevar",res_eye:"Reservas",res_h:"Reserve una mesa",res_p:"Elija día y hora dentro de nuestro horario. Confirmamos por teléfono o correo.",r_date:"Fecha",r_time:"Hora",r_people:"Personas",r_phone:"Teléfono",r_note:"Nota (alergias, trona, cumpleaños …)",r_note2:"Nota",r_btn:"Solicitar reserva",r_hint:"¿Prefiere llamar? 09 386 90 65",t_eye:"Para llevar",t_h:"Pida para llevar",t_p:"Elija sus platos, indique una hora de recogida y envíe el pedido. Se paga al recoger en el café.",t_cart:"Su pedido",t_empty:"Nada elegido aún. Haga clic en + junto a un plato.",t_total:"Total",t_time:"Hora de recogida",t_btn:"Enviar pedido",x_wed:"Los miércoles cerramos. Elija otro día.",x_past:"Elija un día y una hora futuros.",x_req:"Rellene todos los campos obligatorios.",x_empty:"Elija primero al menos un plato.",x_hours:"Abrimos de 10:00 a 19:00.",ok_res:"¡Casi listo!",ok_res_p:"Envíe su solicitud por WhatsApp o correo; confirmamos lo antes posible.",ok_take:"Pedido listo para enviar",ok_take_p:"Envíelo por WhatsApp o correo; confirmamos la hora de recogida.",wa:"Enviar por WhatsApp",mail:"Enviar por correo",call:"Llamar",st_open:"Abierto · hasta las 19:00",st_closed:"Cerrado · abre",st_today:"hoy",st_tomorrow:"mañana",st_at:"a las",days:["dom", "lun", "mar", "mié", "jue", "vie", "sáb"],m_res:"Reserva",m_people:"personas",m_order:"Pedido para llevar",m_pickup:"Recogida",m_pay:"Pago al recoger",m_name:"Nombre",m_phone:"Tel",m_note:"Nota",m_more:"+ grupos grandes: llámenos",brand_sub:"Café persa · Gante",nav_home:"Bienvenido",nav_about:"Sobre nosotros",nav_menu:"Carta",nav_products:"Productos",nav_gallery:"Galería",nav_contact:"Ubicación y contacto",nav_reviews:"Reseñas",
 hours_t:"Horario",hours_1:"Lu, ma, ju–do: 10:00 – 19:00",hours_2:"Miércoles cerrado",
-hero_eye:"Sluizeken 34, en el corazón de Gante",hero_h:"Bienvenido a Café Nava",hero_p:"Un ambiente tranquilo y acogedor, café y té deliciosos y los sabores de Persia.",hero_cta:"Abrir la carta",scroll:"desplazar",
+hero_eye:"Sluizeken 34, en el corazón de Gante",hero_h:"Bienvenido a Café Restaurant Nava",hero_p:"Un ambiente tranquilo y acogedor, café y té deliciosos y los sabores de Persia.",hero_cta:"Abrir la carta",scroll:"desplazar",
 about_eye:"Sobre nosotros",about_h:"Un oasis de calma en Gante",
-about_p1:"Café Nava está en el corazón de Gante, en una calle llena de cafés y restaurantes acogedores. Disfrute de un ambiente elegante y tranquilo con aperitivos fríos y calientes: un lugar cálido y acogedor para relajarse con una buena taza de café, té recién hecho y bebidas refrescantes.",
+about_p1:"Café Restaurant Nava está en el corazón de Gante, en una calle llena de cafés y restaurantes acogedores. Disfrute de un ambiente elegante y tranquilo con aperitivos fríos y calientes: un lugar cálido y acogedor para relajarse con una buena taza de café, té recién hecho y bebidas refrescantes.",
 about_p2:"Ya venga solo para un momento de calma o con amigos para disfrutar, nos encargamos de que sea una experiencia inolvidable. ¡Esperamos darle la bienvenida!",
-about_q:"En Café Nava también encontrará productos iraníes auténticos como azafrán y pistachos.",
+about_q:"En Café Restaurant Nava también encontrará productos iraníes auténticos como azafrán y pistachos.",
 f1_h:"Té, café y pastel Napoleón",f1_p:"Té persa en vaso, buen café y pastel Napoleón iraní recién hecho.",
 f2_h:"Azafrán iraní premium",f2_p:"Aroma intenso y color profundo, también para llevar a casa.",
 f3_h:"Guisos con arroz al azafrán",f3_p:"Ghormeh sabzi, gheimeh y khoresht bademjan como en casa.",
@@ -741,15 +755,15 @@ const thumb=k=>D[k].img?`<img class="th" src="${IMG[D[k].img]}" alt="" data-lbk=
 function listPage([t,fa,items]){
   const rows=items.map(k=>k[0]==="#"?`<div class="sub">${PT[k.slice(1)][lang]}</div>`:
     `<div class="item">${thumb(k)}<span><b>${D[k].n}</b>${D[k].d?`<small>${D[k].d[lang]||D[k].d.en}</small>`:""}</span><span class="pr">€ ${D[k].p}</span></div>`).join("");
-  return `<div class="pg ${items.length>8?"dense":""}"><h3>${PT[t][lang]}</h3><div class="fa">${PT[fa][lang]||"&nbsp;"}</div>${rows}<div class="foot">Café Nava · Sluizeken 34 · Gent</div></div>`;
+  return `<div class="pg ${items.length>8?"dense":""}"><h3>${PT[t][lang]}</h3><div class="fa">${PT[fa][lang]||"&nbsp;"}</div>${rows}<div class="foot">Café Restaurant Nava · Sluizeken 34 · Gent</div></div>`;
 }
 function buildPages(){
   const P=[];
-  P.push(`<div class="pg cover"><div class="w">Café Nava</div><div class="orn"></div><div class="s">${T[lang].b_cover_s}</div><div class="open">${T[lang].b_open}</div></div>`);
-  P.push(`<div class="pg note"><div class="w">Café Nava</div><p>${T[lang].b_inside}</p><p>Sluizeken 34 · Gent</p></div>`);
+  P.push(`<div class="pg cover"><div class="w">Café Restaurant Nava</div><div class="orn"></div><div class="s">${T[lang].b_cover_s}</div><div class="open">${T[lang].b_open}</div></div>`);
+  P.push(`<div class="pg note"><div class="w">Café Restaurant Nava</div><p>${T[lang].b_inside}</p><p>Sluizeken 34 · Gent</p></div>`);
   PAGES.forEach(pg=>P.push(listPage(pg)));
   if((P.length+1)%2)P.push(`<div class="pg note"><div class="w">${T[lang].b_back}</div><p>Sluizeken 34 · 9000 Gent<br>09 386 90 65<br>info@cafenava.be</p></div>`);
-  P.push(`<div class="pg cover"><div class="w">Café Nava</div><div class="orn"></div><div class="s">Sluizeken 34 · 9000 Gent<br>09 386 90 65 · info@cafenava.be</div></div>`);
+  P.push(`<div class="pg cover"><div class="w">Café Restaurant Nava</div><div class="orn"></div><div class="s">Sluizeken 34 · 9000 Gent<br>09 386 90 65 · info@cafenava.be</div></div>`);
   return P;
 }
 function buildBook(){
@@ -857,7 +871,7 @@ rform.addEventListener("submit",e=>{
   if(!f.get("date")||!f.get("time")){rerr.textContent=t.x_past;return}
   if(new Date(f.get("date")+"T12:00").getDay()===CLOSED_DAY){rerr.textContent=t.x_wed;return}
   if(!f.get("name").trim()||!f.get("phone").trim()){rerr.textContent=t.x_req;return}
-  const msg=`${t.m_res} Café Nava\n${niceDate(f.get("date"))} ${f.get("time")} · ${f.get("people")} ${t.m_people}\n${t.m_name}: ${f.get("name")}\n${t.m_phone}: ${f.get("phone")}${f.get("email")?"\nE-mail: "+f.get("email"):""}${f.get("note")?"\n"+t.m_note+": "+f.get("note"):""}`;
+  const msg=`${t.m_res} Café Restaurant Nava\n${niceDate(f.get("date"))} ${f.get("time")} · ${f.get("people")} ${t.m_people}\n${t.m_name}: ${f.get("name")}\n${t.m_phone}: ${f.get("phone")}${f.get("email")?"\nE-mail: "+f.get("email"):""}${f.get("note")?"\n"+t.m_note+": "+f.get("note"):""}`;
   showDone(document.getElementById("rdone"),t.ok_res,t.ok_res_p,msg);
 });
 
@@ -896,7 +910,7 @@ tform.addEventListener("submit",e=>{
   if(new Date(f.get("date")+"T12:00").getDay()===CLOSED_DAY){terr.textContent=t.x_wed;return}
   if(!f.get("name").trim()||!f.get("phone").trim()){terr.textContent=t.x_req;return}
   let tot=0;const rows=keys.map(k=>{tot+=cart[k]*num(D[k].p);return `${cart[k]}× ${D[k].n} — ${eur(cart[k]*num(D[k].p))}`}).join("\n");
-  const msg=`${t.m_order} Café Nava\n${t.m_pickup}: ${niceDate(f.get("date"))} ${f.get("time")}\n\n${rows}\n${t.t_total}: ${eur(tot)} (${t.m_pay})\n\n${t.m_name}: ${f.get("name")}\n${t.m_phone}: ${f.get("phone")}${f.get("note")?"\n"+t.m_note+": "+f.get("note"):""}`;
+  const msg=`${t.m_order} Café Restaurant Nava\n${t.m_pickup}: ${niceDate(f.get("date"))} ${f.get("time")}\n\n${rows}\n${t.t_total}: ${eur(tot)} (${t.m_pay})\n\n${t.m_name}: ${f.get("name")}\n${t.m_phone}: ${f.get("phone")}${f.get("note")?"\n"+t.m_note+": "+f.get("note"):""}`;
   showDone(document.getElementById("tdone"),t.ok_take,t.ok_take_p,msg);
 });
 
@@ -930,6 +944,44 @@ document.querySelectorAll("#nav a").forEach(a=>a.addEventListener("click",()=>{s
 
 /* ---------- contactformulier (opent e-mailprogramma) ---------- */
 document.getElementById("form").addEventListener("submit",e=>{e.preventDefault();const f=new FormData(e.target);location.href=`mailto:info@cafenava.be?subject=${encodeURIComponent(f.get("subject"))}&body=${encodeURIComponent(f.get("message")+"\n\n"+f.get("name")+" — "+f.get("email"))}`;});
+
+/* ---------- algemene voorwaarden & privacy ---------- */
+const LEGAL={
+terms:{nl:`<h2>Algemene voorwaarden</h2><p class="meta">NAVA BV · Sluizeken 34, 9000 Gent · BTW BE 1013.306.441 · info@cafenava.be · 09 386 90 65 · Laatst bijgewerkt: september 2026</p>
+<h3>1. Toepassing</h3><p>Deze voorwaarden gelden voor elk bezoek aan Café Restaurant Nava, elke reservatie en elke afhaalbestelling via deze website, per telefoon, e-mail of WhatsApp.</p>
+<h3>2. Reservaties</h3><p>Een aanvraag via de website is pas definitief na bevestiging door ons (telefonisch, per e-mail of WhatsApp). Gelieve ons te verwittigen als u later komt of niet kunt komen; gereserveerde tafels houden we 15 minuten vrij. Voor groepen van meer dan 12 personen vragen we om ons te bellen.</p>
+<h3>3. Afhaalbestellingen</h3><p>Een bestelling is definitief na onze bevestiging van het afhaaluur. De betaling gebeurt bij afhaling in het café (cash of kaart). Alle prijzen zijn in euro, inclusief btw. Bestellingen kunnen tot 1 uur voor het afhaaluur kosteloos gewijzigd of geannuleerd worden. Gerechten dienen na afhaling gekoeld bewaard en dezelfde dag geconsumeerd te worden.</p>
+<h3>4. Allergenen</h3><p>Onze gerechten kunnen allergenen bevatten (o.a. gluten, noten, melk, ei, sesam). Vermeld allergieën bij uw bestelling of vraag ernaar aan ons personeel.</p>
+<h3>5. Producten</h3><p>Op onze Iraanse producten (saffraan, pistaches, rijst, conserven) gelden de wettelijke garanties. Voedingswaren die geopend zijn, worden niet teruggenomen.</p>
+<h3>6. Aansprakelijkheid</h3><p>NAVA BV is niet aansprakelijk voor schade door overmacht, verkeerd gebruik van producten of onjuiste informatie die door de klant werd doorgegeven. Foto's op de website zijn indicatief; de presentatie van gerechten kan afwijken.</p>
+<h3>7. Toepasselijk recht</h3><p>Op deze voorwaarden is het Belgisch recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechtbanken van Gent. Consumenten kunnen ook terecht bij de Consumentenombudsdienst (consumentenombudsdienst.be).</p>`,
+en:`<h2>Terms & conditions</h2><p class="meta">NAVA BV · Sluizeken 34, 9000 Ghent, Belgium · VAT BE 1013.306.441 · info@cafenava.be · +32 9 386 90 65 · Last updated: September 2026</p>
+<h3>1. Scope</h3><p>These terms apply to every visit to Café Restaurant Nava and to every reservation and take-away order made through this website, by phone, e-mail or WhatsApp.</p>
+<h3>2. Reservations</h3><p>A request made through the website is only final once we have confirmed it (by phone, e-mail or WhatsApp). Please let us know if you are late or cannot come; tables are held for 15 minutes. For groups of more than 12 people, please call us.</p>
+<h3>3. Take-away orders</h3><p>An order is final once we have confirmed the pick-up time. Payment is made on collection at the café (cash or card). All prices are in euro and include VAT. Orders can be changed or cancelled free of charge up to 1 hour before the pick-up time. Dishes must be kept refrigerated after collection and eaten the same day.</p>
+<h3>4. Allergens</h3><p>Our dishes may contain allergens (including gluten, nuts, milk, egg, sesame). Please mention allergies when ordering or ask our staff.</p>
+<h3>5. Products</h3><p>Statutory guarantees apply to our Iranian products (saffron, pistachios, rice, preserves). Opened food products cannot be returned.</p>
+<h3>6. Liability</h3><p>NAVA BV is not liable for damage caused by force majeure, misuse of products or incorrect information supplied by the customer. Photos on the website are indicative; the presentation of dishes may differ.</p>
+<h3>7. Applicable law</h3><p>These terms are governed by Belgian law. Disputes are submitted to the competent courts of Ghent. Consumers may also contact the Belgian Consumer Mediation Service (consumerombudsman.be).</p>`},
+privacy:{nl:`<h2>Privacybeleid</h2><p class="meta">Verwerkingsverantwoordelijke: NAVA BV, Sluizeken 34, 9000 Gent · BTW BE 1013.306.441 · info@cafenava.be · Laatst bijgewerkt: september 2026</p>
+<h3>Welke gegevens verzamelen we?</h3><p>Enkel wat u ons zelf bezorgt via het reservatie-, bestel- of contactformulier: naam, telefoonnummer, e-mailadres, datum en uur, aantal personen, uw bestelling en eventuele opmerkingen (bv. allergieën).</p>
+<h3>Waarvoor gebruiken we ze?</h3><p>Om uw reservatie of bestelling te verwerken, u te bevestigen en te contacteren als er iets wijzigt. Rechtsgrond: de uitvoering van de overeenkomst (art. 6.1.b AVG). We gebruiken uw gegevens niet voor reclame en verkopen ze nooit aan derden.</p>
+<h3>Hoe worden ze verzonden?</h3><p>De formulieren op deze website slaan niets op een server op. Uw bericht wordt aangemaakt op uw eigen toestel en door u verstuurd via WhatsApp of uw e-mailprogramma. Op WhatsApp gelden ook de voorwaarden van WhatsApp (Meta).</p>
+<h3>Hoe lang bewaren we ze?</h3><p>Berichten over reservaties en bestellingen bewaren we maximaal 12 maanden; gegevens die nodig zijn voor de boekhouding bewaren we 7 jaar (wettelijke verplichting).</p>
+<h3>Cookies en lokale opslag</h3><p>Deze website plaatst geen trackingcookies. In uw browser bewaren we enkel uw taalkeuze en de inhoud van uw afhaalmandje (lokale opslag, alleen op uw toestel). De ingesloten Google Maps-kaart en Google Fonts kunnen door Google gegevens verwerken volgens het privacybeleid van Google.</p>
+<h3>Uw rechten</h3><p>U hebt recht op inzage, verbetering, verwijdering en overdracht van uw gegevens, en u kunt bezwaar maken tegen de verwerking. Mail naar info@cafenava.be. U kunt ook een klacht indienen bij de Gegevensbeschermingsautoriteit (gegevensbeschermingsautoriteit.be).</p>`,
+en:`<h2>Privacy policy</h2><p class="meta">Data controller: NAVA BV, Sluizeken 34, 9000 Ghent, Belgium · VAT BE 1013.306.441 · info@cafenava.be · Last updated: September 2026</p>
+<h3>What data do we collect?</h3><p>Only what you give us through the reservation, order or contact form: name, phone number, e-mail address, date and time, number of guests, your order and any remarks (e.g. allergies).</p>
+<h3>What do we use it for?</h3><p>To process your reservation or order, to confirm it and to contact you if anything changes. Legal basis: performance of a contract (art. 6.1.b GDPR). We do not use your data for advertising and never sell it to third parties.</p>
+<h3>How is it sent?</h3><p>The forms on this website do not store anything on a server. Your message is created on your own device and sent by you via WhatsApp or your e-mail programme. On WhatsApp, WhatsApp's (Meta's) terms also apply.</p>
+<h3>How long do we keep it?</h3><p>Messages about reservations and orders are kept for a maximum of 12 months; data required for accounting is kept for 7 years (legal obligation).</p>
+<h3>Cookies and local storage</h3><p>This website sets no tracking cookies. In your browser we only store your language choice and the contents of your take-away basket (local storage, on your device only). The embedded Google Map and Google Fonts may process data according to Google's privacy policy.</p>
+<h3>Your rights</h3><p>You have the right to access, correct, delete and transfer your data, and to object to processing. E-mail info@cafenava.be. You can also lodge a complaint with the Belgian Data Protection Authority (dataprotectionauthority.be).</p>`}};
+const modal=document.getElementById("modal");
+document.querySelectorAll("[data-legal]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();const t=LEGAL[a.dataset.legal];document.getElementById("mbody").innerHTML=t[lang]||t.en;modal.classList.add("open");modal.querySelector(".box").scrollTop=0;}));
+document.getElementById("mclose").addEventListener("click",()=>modal.classList.remove("open"));
+modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("open")});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")modal.classList.remove("open")});
 
 setLang(pickLang());
 </script>
