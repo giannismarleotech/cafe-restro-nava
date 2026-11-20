@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Locatie & contact — Café Restaurant Nava</title>
+<meta name="description" content="Sluizeken 34, 9000 Gent. Telefoon 09 386 90 65.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Vazirmatn:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="nava-site.css">
+</head>
+<body data-page="contact.html">
+
+<div class="topbar"><a class="word" href="index.html">Café Restaurant Nava</a><button class="burger" id="burger" aria-label="Menu" aria-controls="side" aria-expanded="false"><span></span><span></span><span></span></button></div>
+
+<aside class="side" id="side">
+  <a class="brand" href="index.html"><div class="word">Café Restaurant<br>Nava</div><div class="sub" data-i18n="brand_sub">Perzisch café · Gent</div></a>
+  <nav class="nav" id="nav">
+    <a href="index.html" data-p="index.html" data-i18n="nav_home">Welkom</a>
+    <a href="over.html" data-p="over.html" data-i18n="nav_about">Over ons</a>
+    <a href="menu.html" data-p="menu.html" data-i18n="nav_menu">Menukaart</a>
+    <a href="winkel.html" data-p="winkel.html" data-i18n="nav_shop">Winkel</a>
+    <a href="producten.html" data-p="producten.html" data-i18n="nav_products">Producten</a>
+    <a href="galerij.html" data-p="galerij.html" data-i18n="nav_gallery">Galerij</a>
+    <a href="reserveren.html" data-p="reserveren.html" data-i18n="nav_res">Reserveren</a>
+    <a href="afhalen.html" data-p="afhalen.html" data-i18n="nav_take">Afhalen</a>
+    <a href="reviews.html" data-p="reviews.html" data-i18n="nav_reviews">Reviews</a>
+    <a href="contact.html" data-p="contact.html" data-i18n="nav_contact">Locatie & contact</a>
+  </nav>
+  <div class="langs" id="langs"><button data-lang="nl">NL</button><button data-lang="en">EN</button><button data-lang="fr">FR</button><button data-lang="de">DE</button><button data-lang="es">ES</button><button data-lang="fa" lang="fa">فارسی</button></div>
+  <div class="hours"><strong data-i18n="hours_t">Openingsuren</strong><span data-i18n="hours_1">Ma, di, do, vr, za, zo: 10:00 – 20:00</span><br><span data-i18n="hours_2">Woensdag gesloten</span><br><span class="status" id="status"></span></div>
+  <div class="social"><a href="https://www.instagram.com/cafenava.be/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/CafeNava.be/" target="_blank" rel="noopener">Facebook</a></div>
+</aside>
+
+<main id="top">
+  <section id="contact" class="contact">
+    <div class="info rv">
+      <div class="eyebrow" data-i18n="c_eye">Locatie &amp; contact</div>
+      <h2 data-i18n="c_h">Waar u ons kunt vinden</h2>
+      <p style="margin-top:22px"><strong data-i18n="c_addr_t">Ons adres</strong><a href="https://www.google.com/maps/search/?api=1&query=Sluizeken+34,+9000+Gent" target="_blank" rel="noopener">Sluizeken 34, 9000 Gent</a></p>
+      <p><strong data-i18n="c_tel_t">Telefoon</strong><a href="tel:+3293869065">09 386 90 65</a><br><a href="tel:+32494617413">0494 61 74 13</a></p>
+      <p><strong>E-mail</strong><a href="mailto:info@cafenava.be">info@cafenava.be</a></p>
+      <p><strong data-i18n="c_company">Onderneming</strong>NAVA BV · BTW BE 1013.306.441</p>
+      <p><strong data-i18n="hours_t">Openingsuren</strong><span data-i18n="hours_1"></span><br><span data-i18n="hours_2"></span></p>
+      <p><strong data-i18n="transit_label">Openbaar vervoer</strong><span data-i18n="transit_text">Vlot bereikbaar met het openbaar vervoer.</span><br><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sluizeken+34,+9000+Gent&amp;travelmode=transit" data-i18n="transit_route">Plan uw route</a></p>
+      <div class="map"><iframe title="map" loading="lazy" src="https://www.google.com/maps?q=Sluizeken+34,+9000+Gent&output=embed"></iframe></div>
+    </div>
+    <div class="rv" style="transition-delay:.15s">
+      <h3 data-i18n="c_form_h">Neem contact op</h3>
+      <p style="color:var(--dim);margin-top:10px" data-i18n="c_form_p"></p>
+      <form id="form">
+        <label><span data-i18n="f_name">Naam</span><input name="name" required></label>
+        <label><span data-i18n="f_mail">E-mail</span><input name="email" type="email" required></label>
+        <label><span data-i18n="f_subj">Onderwerp</span><input name="subject" required></label>
+        <label><span data-i18n="f_msg">Bericht</span><textarea name="message"></textarea></label>
+        <button type="submit" data-i18n="f_send">Verstuur</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div><span class="w">Café Restaurant Nava</span><br><span>NAVA BV · BTW BE 1013.306.441 · Sluizeken 34, 9000 Gent · <a href="mailto:info@cafenava.be" style="text-decoration:none">info@cafenava.be</a></span></div>
+  <div class="legal"><a href="#" data-legal="terms" data-i18n="l_terms">Algemene voorwaarden</a> · <a href="#" data-legal="privacy" data-i18n="l_privacy">Privacybeleid</a><br><span>© 2026 NAVA BV · <span data-i18n="rights">Alle rechten voorbehouden</span></span></div>
+</footer>
+<div class="modal" id="modal"><div class="box"><button class="close" id="mclose" aria-label="close">✕</button><div id="mbody"></div></div></div>
+<button class="totop" id="totop" aria-label="top">↑</button>
+<a class="cartbadge" id="cartbadge" href="afhalen.html"></a>
+<div class="lb" id="lb"><span class="x">✕</span><img alt=""><b></b></div>
+
+<script src="nava-data.js"></script>
+<script src="nava-shop-data.js"></script>
+<script src="nava-site.js"></script>
+</body>
+</html>
